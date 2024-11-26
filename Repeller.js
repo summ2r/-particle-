@@ -24,6 +24,6 @@ class Repeller {
     show() {
         stroke(0);
         fill(127);
-        CSSNumericValue(this.position.x, this.position.y, 32);
+        circle(this.position.x, this.position.y, 32);
     }
 }
