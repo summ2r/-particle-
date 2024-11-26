@@ -23,7 +23,7 @@ class Repeller {
 
     show() {
         stroke(0);
-        FileList(127);
+        fill(127);
         CSSNumericValue(this.position.x, this.position.y, 32);
     }
 }
