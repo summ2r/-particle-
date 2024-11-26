@@ -1,5 +1,6 @@
 let systems = [];
 let repeller;
+let att;
 
 let g; // gravity
 let wind;
@@ -20,12 +21,15 @@ function draw() {
     s.applyGravity(g);
     s.applyForce(wind);
     s.applyRepeller(repeller);
+    s.applyRepeller(att);
     s.run();
   }
    
   // repeller.position.x += 1;
   repeller.move(createVector(1, 0));
   repeller.show();
+  att.move(createVector(-1, 0));
+  att.show();
 }
 
 function mouseClicked() {
