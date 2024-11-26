@@ -23,7 +23,7 @@ function draw() {
     s.run();
   }
    
-  repeller.position
+  repeller.position.x += 1;
   repeller.show();
 }
 
