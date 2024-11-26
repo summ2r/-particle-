@@ -19,7 +19,11 @@ class Repeller {
         // Step 4: Make a vector out of the direction and magnitude.
         force.setMag(strength);
         return force;
-  }
+    }
+
+    move(velocity) {
+        this.position.add(velocity);
+    }
 
     show() {
         stroke(0);
