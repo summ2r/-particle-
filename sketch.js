@@ -8,8 +8,8 @@ function setup() {
   createCanvas(720, 400);
   // system = new ParticleSystem(createVector(width / 2, 50));
   g = createVector(0, 0.05);
-  wind = createVector(0.03, -0.01);
-  repeller = new Repeller(width / 2 -29, height / 2);
+  // wind = createVector(0.03, -0.01);
+  repeller = new Repeller(0, height / 2);
 }
 
 function draw() {
@@ -22,7 +22,8 @@ function draw() {
     s.applyRepeller(repeller);
     s.run();
   }
-
+   
+  repeller.position
   repeller.show();
 }
 
