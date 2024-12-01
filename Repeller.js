@@ -26,6 +26,7 @@ class Repeller {
 
         if (this.position.x > width) {
             this.position.x = 0;
+            this.position.y = random(0, 400);
         }
     }
 

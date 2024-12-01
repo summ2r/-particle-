@@ -5,7 +5,7 @@ let g; // gravity
 
 function setup() {
   createCanvas(720, 400);
-  g = createVector(0, 0.05);
+  g = createVector(0, -0.02);
   repeller = new Repeller(0, height / 2);
 }
 
