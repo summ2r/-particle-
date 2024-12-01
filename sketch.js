@@ -23,10 +23,7 @@ function draw() {
     s.run();
   }
 
-
-  repeller.move1(createVector(1, 0));
-  repeller.move2(createVector(0, 1));
-
+  repeller.move(createVector(1, 0));
   repeller.show();
 }
 

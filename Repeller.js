@@ -21,23 +21,9 @@ class Repeller {
         return force;
     }
 
-    move.1(velocity) {
+    move(velocity) {
         this.position.add(velocity);
-        if (this.position.x > 720) {
-            this.position = (360, 0);
-            this.position.y.add(velocity);
-        }
     }
-    
-    
-    move.2(velocity) {
-        this.position.add(velocity);
-        if (this.position.y > 400) {
-            this.position = (0, 200);
-            this.position.x.add(velocity);
-        }
-    }
-    
 
     show() {
         stroke(0);
