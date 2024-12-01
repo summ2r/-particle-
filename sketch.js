@@ -1,14 +1,15 @@
-let system;
 let systems = [];
+let repeller;
 
 let g; // gravity
-let wind;
+// let wind;
 
 function setup() {
   createCanvas(720, 400);
   // system = new ParticleSystem(createVector(width / 2, 50));
   g = createVector(0, 0.05);
-  wind = createVector(0.03, -0.01);
+  // wind = createVector(0.03, -0.01);
+  repeller = new Repeller(0, height / 2);
 }
 
 function draw() {
@@ -17,9 +18,13 @@ function draw() {
   for (let s of systems) {
     s.addParticle();
     s.applyGravity(g);
-    s.applyForce(wind);
+    // s.applyForce(wind);
+    s.applyRepeller(repeller);
     s.run();
   }
+
+  repeller.move(createVector(1, 0));
+  repeller.show();
 }
 
 function mouseClicked() {
