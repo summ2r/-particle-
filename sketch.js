@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background(255);
 
   for (let s of systems) {
     s.addParticle();

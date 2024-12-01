@@ -29,8 +29,8 @@ class Particle {
     display() {
         stroke(200, this.lifespan);
         strokeWeight(2);
-        fill(127, this.lifespan);
-        rect(this.position.x, this.position.y, this.w/4, this.w*4);
+        fill(0);
+        rect(this.position.x, this.position.y, this.w/4, this.w*100);
     }
 
     isDead() {
