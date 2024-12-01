@@ -5,7 +5,7 @@ class Particle {
         this.acceleration = createVector(0, 0);
         this.velocity = createVector(random(-1, 1), random(-1, 1));
         this.position = position.copy();
-        this.lifespan = 255;
+        this.lifespan = 200;
         this.w = 2;
     }
 
@@ -30,7 +30,7 @@ class Particle {
         stroke(200, this.lifespan);
         strokeWeight(2);
         fill(127, this.lifespan);
-        ellipse(this.position.x, this.position.y, this.w, this.w);
+        rect(this.position.x, this.position.y, this.w/4, this.w*4);
     }
 
     isDead() {
