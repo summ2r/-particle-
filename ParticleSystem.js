@@ -40,5 +40,6 @@ class ParticleSystem {
 
     togglePause() {
         this.isPaused = !this.isPaused;
+        console.log("Paused:", this.isPaused)
     }
 }

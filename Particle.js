@@ -7,6 +7,7 @@ class Particle {
         this.position = position.copy();
         this.lifespan = 200;
         this.w = 2;
+        this.isPaused = false;
     }
 
     run() {
@@ -19,10 +20,11 @@ class Particle {
     }
 
     update() {
+        if(!this.isPaused) {
         this.velocity.add(this.acceleration);
         this.position.add(this.velocity);
+        }
         this.lifespan -= 2;
-
         this.acceleration.set(0, 0);
     }
 
@@ -35,6 +37,10 @@ class Particle {
 
     isDead() {
         return this.lifespan < 0;
+    }
+
+    togglePause() {
+        this.isPaused = !this.isPaused;
     }
 }
 
