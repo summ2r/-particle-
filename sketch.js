@@ -30,7 +30,7 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-  if (key === 'y') {
+  if (keyCode === 89) { //y
     repeller.togglePause();
   }
 }
