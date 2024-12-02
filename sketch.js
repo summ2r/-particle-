@@ -20,7 +20,7 @@ function draw() {
   }
 
   repeller.move(createVector(1, 0));
-  repeller.show();
+  // repeller.show();
 }
 
 function mouseClicked() {
