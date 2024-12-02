@@ -4,6 +4,10 @@ class Repeller {
         this.power = 150;
     }
 
+    togglePause() {
+        this.isPaused=!this.isPaused;
+    }
+
     // All the same steps to calculate an attractive force, only pointing in the opposite direction
      repel(particle) {
         // Step 1: Get the force direction.
