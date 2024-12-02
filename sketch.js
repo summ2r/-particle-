@@ -30,7 +30,9 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-  if (keyCode === 89) { //y
-    repeller.togglePause();
+  if (keyCode === 13) { //enter
+    for (let s of systems) {
+      s.togglePause();
+    }
   }
 }

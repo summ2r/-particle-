@@ -5,11 +5,6 @@ class Repeller {
         this.isPaused = false; 
     }
 
-  togglePause() {
-    this.isPaused = !this.isPaused;  // 상태를 반전시킴
-    console.log('Repeller paused:', this.isPaused);
-    }
-
     // All the same steps to calculate an attractive force, only pointing in the opposite direction
      repel(particle) {
         // Step 1: Get the force direction.
