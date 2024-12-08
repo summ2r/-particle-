@@ -2,6 +2,7 @@ class Repeller {
     constructor(x, y) {
         this.position = createVector(x, y);
         this.power = 150;
+        this.isPaused = false; 
     }
 
     // All the same steps to calculate an attractive force, only pointing in the opposite direction
@@ -23,6 +24,11 @@ class Repeller {
 
     move(velocity) {
         this.position.add(velocity);
+
+        if (this.position.x > width) {
+            this.position.x = 0;
+            this.position.y = random(0, 400);
+        }
     }
 
     show() {

@@ -2,6 +2,7 @@ class ParticleSystem {
     constructor(position) {
         this.origin = position.copy();
         this.particles = [];
+        this.isPaused = false;
     }
 
     addParticle() {
@@ -28,10 +29,17 @@ class ParticleSystem {
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {
             let p = this.particles[i];
-            p.run();
+            if (!this.isPaused) {
+               p.run();
+            }
             if (p.isDead()) {
               this.particles.splice(i, 1);
             }
           }
+    }
+
+    togglePause() {
+        this.isPaused = !this.isPaused;
+        console.log("Paused:", this.isPaused)
     }
 }
