@@ -1,6 +1,6 @@
 class Repeller {
     constructor(x, y) {
-        this.position = createVector(x, y, z);
+        this.position = createVector(x, y);
         this.power = 150;
         this.isPaused = false; 
     }
@@ -34,6 +34,6 @@ class Repeller {
     show() {
         stroke(0);
         fill(127);
-        circle(this.position.x, this.position.z, 32);
+        circle(this.position.x, this.position.y, 32);
     }
 }
