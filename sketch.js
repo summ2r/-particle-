@@ -21,8 +21,8 @@ function setup() {
     ));
     scales.push(random(0.5, 2));
   }
-  g = createVector(0, -0.02);
-  repeller = new Repeller(0, height / 2);
+  g = createVector(0, -0.02, 0);
+  repeller = new Repeller(0, height / 2, width / 2);
 }
 
 function draw() {
@@ -53,12 +53,12 @@ function draw() {
     s.run();
   }
 
-  repeller.move(createVector(1, 0));
-  // repeller.show();
+  repeller.move(createVector(1, 0, 0));
+  repeller.show();
 }
 
 function mouseClicked() {
-  let mPos = createVector(mouseX, mouseY);
+  let mPos = createVector(mouseX, mouseY, mouseZ);
   let system = new ParticleSystem(mPos);
   systems.push(system);
 }
