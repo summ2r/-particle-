@@ -2,33 +2,37 @@ let systems = [];
 let repeller;
 
 let g; // gravity
-// let wind;
 
 function setup() {
   createCanvas(720, 400);
-  // system = new ParticleSystem(createVector(width / 2, 50));
-  g = createVector(0, 0.05);
-  // wind = createVector(0.03, -0.01);
+  g = createVector(0, -0.02);
   repeller = new Repeller(0, height / 2);
 }
 
 function draw() {
-  background(51);
+  background(255);
 
   for (let s of systems) {
     s.addParticle();
     s.applyGravity(g);
-    // s.applyForce(wind);
     s.applyRepeller(repeller);
     s.run();
   }
 
   repeller.move(createVector(1, 0));
-  repeller.show();
+  // repeller.show();
 }
 
 function mouseClicked() {
   let mPos = createVector(mouseX, mouseY);
   let system = new ParticleSystem(mPos);
   systems.push(system);
+}
+
+function keyPressed() {
+  if (keyCode === 13) { //enter
+    for (let s of systems) {
+      s.togglePause();
+    }
+  }
 }
