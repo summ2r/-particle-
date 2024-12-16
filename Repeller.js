@@ -1,6 +1,6 @@
 class Repeller {
-    constructor(x, y) {
-        this.position = createVector(x, y);
+    constructor(x, y, z) {
+        this.position = createVector(x, y, z);
         this.power = 150;
         this.isPaused = false; 
     }
@@ -26,14 +26,18 @@ class Repeller {
         this.position.add(velocity);
 
         if (this.position.x > width) {
-            this.position.x = 0;
-            this.position.y = random(0, 400);
+            this.position.x = -width /2;
+            this.position.y = random(-height / 2, height / 2);
+            this.position.z = random(-200, 200);
         }
     }
 
     show() {
         stroke(0);
         fill(127);
-        circle(this.position.x, this.position.y, 32);
+        push();
+        translate(this.position.x, this.position.y, this.position.y);
+        sphere(10);
+        pop();
     }
 }
